@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 24" width="800" height="24" role="presentation" aria-hidden="true">
+  <line x1="0"    y1="12" x2="260" y2="12" stroke-width="1" stroke="#262626"/>
+  <text font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" letter-spacing="0.14em" text-transform="uppercase" fill="#525252" x="400" y="16" text-anchor="middle">
+    <tspan fill="#22d3ee">//</tspan>&nbsp;<tspan>section</tspan>
+  </text>
+  <line x1="540"  y1="12" x2="800" y2="12" stroke-width="1" stroke="#262626"/>
+</svg>
