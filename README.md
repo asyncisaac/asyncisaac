@@ -1,3 +1,132 @@
+<div align="center">
+
+## 🇧🇷 Português · [🇺🇸 English](#english)
+
+</div>
+
+<p align="center"><strong>Isaac Marinho · Desenvolvedor Full-Stack · Brasil · UTC-3 · Remoto para o mundo</strong><br/>Disponível para projetos freelance e contratos remotos</p>
+
+### Sobre
+
+Trabalho com TypeScript em toda a stack, desde a primeira tela de um produto até workers em segundo plano, registros de pagamentos e transações de banco de dados.
+
+Tenho experiência criando landing pages, dashboards e painéis administrativos. Também gosto especialmente dos desafios que exigem confiabilidade: novas tentativas, eventos duplicados, atualizações concorrentes, falhas parciais, entrega de webhooks e consistência dos dados.
+
+### Da interface à infraestrutura
+
+Quatro camadas em que atuo ao construir um produto completo — da interface à confiabilidade.
+
+### Tecnologias principais
+
+Ferramentas que uso e com as quais desenvolvo.
+
+**FRONTEND**  
+TypeScript · React · Next.js · Tailwind CSS
+
+**BACKEND**  
+Node.js · Express · Prisma · Stripe
+
+**DADOS E SISTEMAS**  
+PostgreSQL · Redis · BullMQ · Docker · GitHub Actions · Vitest
+
+### Além do caminho feliz
+
+Os desafios que mais me interessam — aqueles que fazem um software deixar de ser apenas uma demonstração:
+
+`pagamentos duplicados` · `atualizações concorrentes de estoque` · `reenvio de webhooks` · `tarefas com falha` · `retentativas e backoff` · `falhas parciais` · `consistência dos dados` · `condições de corrida` · `idempotência` · `segurança transacional`
+
+### Projetos selecionados
+
+Projetos que cobrem diferentes camadas da stack.
+
+#### Plataforma de processamento de tarefas assíncronas
+
+Sistema multi-tenant de tarefas em segundo plano, projetado para processar trabalho com segurança mesmo diante de retentativas e falhas parciais.
+
+**Tecnologias:** TypeScript · Node.js · Redis · BullMQ · PostgreSQL · Prisma
+
+**Destaques de engenharia:** idempotência · retentativas e backoff · fila de falhas e reprocessamento · multi-tenancy · limites de taxa, cotas e concorrência · observabilidade · chaves de API com escopo
+
+- Idempotência em duas camadas: restrição única no banco por (tenantId, idempotencyKey) e registros de efeitos por tarefa.
+- Fila de mensagens com falha, fluxo automático de reprocessamento e endpoints de nova tentativa manual.
+- Retentativas com backoff exponencial e jitter, separadas dos handlers de longa duração da API.
+- Limites de taxa, cotas de tarefas e limites de concorrência por tenant.
+- Métricas Prometheus, logs estruturados com IDs de correlação e auditoria completa de eventos por tarefa.
+- API e workers em processos separados para escalar horizontalmente de forma independente.
+
+**[Acessar repositório →](https://github.com/asyncisaac/async-job-processing-platform)**
+
+#### Sistema de pagamentos — com ledger como base
+
+Ledger imutável de saldos, com processamento idempotente de pagamentos e reembolsos.
+
+**Tecnologias:** Node.js · Stripe · PostgreSQL · BullMQ · React
+
+- Saldos calculados a partir de um ledger append-only (soma dos lançamentos), sem atualizações diretas.
+- Idempotência garantida na API (chave única) e nos workers (registro único por evento de pagamento).
+- Pipeline de retentativas e fila de falhas para confirmações e erros de pagamentos assíncronos.
+- Reembolsos usam o mesmo fluxo de transição de status, com trilha de auditoria completa.
+- Testes de integração para condições de corrida com dois workers em paralelo.
+
+**[Acessar repositório →](https://github.com/asyncisaac/payment-system)**
+
+#### Plataforma de e-commerce · Monorepo Full-Stack
+
+Loja completa, autenticação, fluxo de checkout e painel administrativo.
+
+**Tecnologias:** Next.js · React · Express · Prisma · PostgreSQL · Stripe Checkout
+
+- Baixa atômica de estoque (`UPDATE ... WHERE stock >= qty`) com resposta 409 explícita em caso de concorrência.
+- Idempotência de webhooks Stripe garantida por `event.id UNIQUE` no banco.
+- Reserva de estoque restaurada automaticamente em pagamentos assíncronos expirados ou com falha.
+- JWT e refresh tokens rotativos, com acesso administrativo baseado em funções.
+- Observabilidade com logger pino, erros estruturados, endpoints de saúde e testes automatizados.
+
+**[Acessar repositório →](https://github.com/asyncisaac/ecommerce-monorepo)**
+
+#### Gamified Bug Tracker · projeto secundário
+
+Rastreador de bugs com XP e níveis por severidade. Encerramento e concessão de XP em uma única transação. Next.js 15 App Router e interface otimista.
+
+**Tecnologias:** Next.js 15 · Prisma · PostgreSQL
+
+**[Acessar repositório →](https://github.com/asyncisaac/Gamified-Bug-Tracker)**
+
+### O que posso desenvolver
+
+- Aplicações Full-Stack com TypeScript
+- MVPs SaaS e aplicações web
+- Sites, landing pages e dashboards com Next.js
+- APIs backend e lógica de domínio
+- Integrações Stripe e fluxos de webhooks
+- Modelagem de dados PostgreSQL e schemas Prisma
+- Workers em segundo plano com Redis e BullMQ
+- Fluxos de autenticação e autorização
+- Refatoração e depuração de bases de código existentes
+- Integrações com APIs de terceiros
+
+### Vamos construir algo?
+
+Disponível para projetos freelance e contratos remotos. Prefiro contato por e-mail ou LinkedIn.
+
+<p align="center">
+  <a href="mailto:isaacmarinho.dev@gmail.com">E-mail</a> ·
+  <a href="https://linkedin.com/in/isaacmarinho-dev">LinkedIn</a> ·
+  <a href="https://github.com/asyncisaac">GitHub</a>
+</p>
+
+<p align="right"><code>// asyncisaac · da interface à infraestrutura</code></p>
+
+---
+
+<a id="english"></a>
+
+<div align="center">
+
+## 🇺🇸 English · [🇧🇷 Português](#top)
+
+</div>
+
 <div align="center" id="top">
   <a href="#top">
     <picture>
